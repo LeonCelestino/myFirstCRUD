@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --title-color: #FAFEFF;
+  --text-color: #DEDFE2;
+
+
+}
+
+p,
+h2,
+h3,
+h4,
+h5,
+div,
+form {
+  transition: 0.5s linear;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  font-size: 62.4%;
+}
+
+@media (min-width: 961px) {
+
+  body,
+  #root,
+  .App {
+    background: linear-gradient(to right, #000407c1 35%, #151C22 50%) no-repeat 60%;
+  }
+
+  #root .App .posts-box {
+    overflow-y: scroll;
+    max-height: 900px;
+  }
+
+}
+
+body,
+#root,
+.App {
+  display: flex;
+
+  width: 100%;
+  min-height: 100vh;
+
+}
+
+
+
+.App .form-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 30rem;
+  min-width: 58rem;
+  width: 40%;
+
+  background: url(./images/bg.avif) no-repeat top left;
+  background-size: cover;
+
+}
+
+
+.App .form-box form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 5px;
+
+  width: 70%;
+  min-height: 50%;
+  max-height: 80%;
+  padding: 5rem;
+  border-radius: 10px;
+  box-shadow: -1px 4px 10px 1px #ffffff56;
+
+  backdrop-filter: blur(5px);
+  background: linear-gradient(-50deg, transparent, #2C2F36 90%);
+}
+
+.App .form-box form .inputs-box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+
+  max-height: 70%;
+  padding-right: 2rem;
+  overflow-y: scroll;
+
+
+}
+
+.App .form-box h3 {
+  font-size: 2.7rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 2.8rem;
+  color: #FAFEFF;
+  margin-bottom: 5px;
+}
+
+.App .form-box label {
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 1px;
+  color: #DEDFE2;
+}
+
+.option {
+  margin-top: 15px;
+}
+
+.App .form-box input[type="text"] {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  color: #DEDFE2;
+  border-radius: 5px;
+  border: 1px solid #888f9e;
+  padding: 0.6rem;
+  background: #2c2f364a;
+}
+
+.datebox {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 15px;
+}
+
+.App .form-box input[type="date"],
+.App .form-box input[type="time"] {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  color: #DEDFE2;
+
+  padding: 0.7rem 0.9rem;
+  width: 18.8rem;
+  border-radius: 5px;
+  border: none;
+
+
+  background: #767c89;
+}
+
+
+
+.App .form-box input:focus {
+  outline: none;
+}
+
+.App .form-box .buttons-box {
+  margin-top: 30px;
+}
+
+
+.App .form-box .buttons-box button,
+.App .form-box .buttons-box input {
+  text-transform: capitalize;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.8rem;
+  color: #DEDFE2;
+
+  margin-right: 15px;
+  padding: 0.9rem 0.7rem;
+  border: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  background: #020403b3;
+}
+
+
+.App .form-box .buttons-box input {
+  margin-bottom: 1.5rem;
+  background: #292c2fe6;
+}
+
+.App .form-box .buttons-box input:hover {
+  background: #3d4145e6;
+}
+
+.App .form-box .buttons-box button:hover {
+  background: #13251cb3;
+}
+
+/* POSTS BOXS */
+
+.posts-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+
+  margin-top: 5rem;
+  margin-left: 5rem;
+
+}
+
+.posts-box .post {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  min-width: 20rem;
+  max-width: 40rem;
+  max-height: 35rem;
+  padding-inline: 3rem;
+  box-shadow: 1px 1px 10px 1px #020403;
+
+  background: #020403e6;
+
+  overflow-y: hidden;
+}
+
+.posts-box .post .date-and-title {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 2rem;
+
+
+}
+
+.posts-box .post .date-and-title h2,
+.posts-box .post .date-and-title h5 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--title-color);
+}
+
+.posts-box .post .content {
+  max-height: 40%;
+  padding-inline: 1rem;
+  overflow-y: scroll;
+}
+
+.posts-box .post .option {
+  display: flex;
+  justify-content: space-between;
+  row-gap: 2rem;
+
+
+
+}
+
+.posts-box .post .content .option p {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+}
+
+.posts-box .post .content .option .thisWillIncremente {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.posts-box .post .content .option .optionDesc {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.posts-box .post .option .thrash-and-edit {
+  display: flex;
+  flex-direction: row-reverse;
+  column-gap: 15px;
+}
+
+.posts-box .post .option .thrash-and-edit svg {
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+.posts-box .post .option .thrash-and-edit svg:hover {
+  color: #c9dad1e6;
+}
+
+.posts-box .post .expire-date h5 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  color: var(--title-color);
+
+}
+
+.posts-box .post .expire-date h5 span {
+  margin-left: 1rem;
+}
+
+/* MEDIAS MOBILE */
+
+@media (max-width: 960px) {
+
+  body,
+  #root,
+  .App {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    min-height: 100vh;
+
+    background: linear-gradient(to top, #000407c1 35%, #151C22 50%) no-repeat 60%;
+  }
+
+
+
+
+
+  .App .form-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 29rem;
+    width: 100%;
+    min-height: 90vh;
+
+    background: url(./images/bg.avif) no-repeat top left;
+    background-size: cover;
+
+
+  }
+
+  .App .posts-box {
+    justify-content: center;
+
+    min-height: 30vh;
+    margin: 1rem;
+  }
+
+  .App .form-box form .buttons-box button {
+    width: 100%;
+  }
+
+  .App .form-box form .buttons-box input[type="submit"] {
+    width: 100%;
+  }
+
+
+
+
+}
+
+@media (max-width: 410px) {
+  .App .form-box form {
+    padding: 2rem;
+    min-width: 90%;
+  }
+
+
+  .App .form-box form h3 {
+    font-size: 2rem;
+  }
+
+  .App .form-box form label {
+    font-size: 1.5rem;
+  }
+
+  .App .form-box form .buttons-box button {
+    font-size: 1.8rem;
+    width: 100%;
+  }
+
+  .App .form-box form .buttons-box input[type="submit"] {
+    width: 100%;
+    font-size: 1.8rem;
+  }
+
+  .App .posts-box .content {
+    padding-left: 0;
+  }
+
+  .App .posts-box .date-and-title h2 {
+    font-size: 1.7rem;
+  }
+
+  .App .posts-box .date-and-title h5 {
+    font-size: 1.7rem;
+  }
+
+  .posts-box .post .content .option .thisWillIncremente {
+    font-size: 1.5rem;
+  }
+
+  .posts-box .post .content .option .optionDesc {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+  }
+
+
+  .App .posts-box .expire-date h5 {
+    font-size: 1.3rem;
+  }
+}
